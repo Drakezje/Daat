@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./1.js"></script>
+</head>
+<body>
+    <h1>People don’t leave because things are hard.They leave because it’s no longer worth it </h1>
+    <!-- <input type="button" value="ClickMe" onclick="alert(1)"> //sự kiện click alert -->
+    <input type="button" value="Clickme" id="clickme">
+    <script>
+        var button = document.querySelector("#clickme");
+        button.addEventListener("click",function(){
+            alert("Hello mtker");
+        });
+        
+        var myVar = "global"; // Khai báo một biến Global
+      function checkscope( ) {
+         var myVar = "local";  // Khai báo một biến Local
+         document.write(myVar);
+      }
+    </script>
+</body>
+</html>

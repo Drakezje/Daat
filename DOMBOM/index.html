@@ -1,0 +1,318 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/DOMBOM/1.js"></script>
+</head>
+<body>
+    <input type="button" value="Click me" id="show-btn">
+    <script>
+        var button = document.getElementById("show-btn");
+        button.onclick=function(){
+        alert("B vừa click vào button");
+        }
+    </script>
+
+    <h1>bắt sự kiện nhiều thẻ html</h1>
+    <ul>
+        <li>
+            <a href="" class="show">a</a>
+            <a href="">b</a>
+            <a href="" class="show">c</a>
+        </li>
+    </ul>
+    <script>
+        var a_list = document.getElementsByClassName("show");
+        for(var i =0; i < a_list.length;i++){
+            a_list[i].onclick=function(){
+                alert("Xin chào, bạn vừa click vào tôi");
+                return false;//return false để khỏi load trang
+            }
+
+        }
+    </script>
+    <h3>
+<ul>
+    1	onclick	Xảy ra khi click vào thẻ HTML
+    2	ondbclick	Xảy ra khi double click vào thẻ HTML
+    3	onchange	Xảy ra khi giá trị (value) của thẻ HTML đổi. Thường dùng trong các đối thẻ form input
+    4	onmouseover	Xảy ra khi con trỏ chuột bắt đầu đi vào thẻ HTML
+    5	onmouseout	Xảy ra khi con trỏ chuột bắt đầu rời khỏi thẻ HTML
+    6	onmouseenter	Tương tự như onmouseover
+    7	onmouseleave	Tương tự như onmouseout
+    8	onmousemove	Xảy ra khi con chuột di chuyển bên trong thẻ HTML
+    9	onkeydown	Xảy ra khi gõ một phím bất kì vào ô input
+    10	onload	Sảy ra khi thẻ HTML bắt đầu chạy, nó giống như hàm khởi tạo trong lập trình hướng đối tượng vậy đó.
+    11	onkeyup	Xảy ra khi bạn gõ phím nhưng lúc bạn nhã phím ra sẽ được kích hoạt
+    12	onkeypress	Xảy ra khi bạn nhấn môt phím vào ô input
+    14	onblur	Xảy ra khi con trỏ chuột rời khỏi ô input
+    15	oncopy	Xảy ra khi bạn copy nội dung của thẻ
+    16	oncut	Xảy ra khi bạn cắt nội dung của thẻ
+    17	onpaste	Xảy ra khi bạn dán nội dung vào thẻ
+</ul>
+
+    <script language="javascript">
+      // Hàm show kết quả
+      function show_result()
+      {
+        // Lấy hai thẻ HTML
+        var input = document.getElementById("message");
+        var div = document.getElementById("result");
+         
+        // Gán nội dung ô input vào thẻ div
+        div.innerHTML = input.value;
+      }
+    </script>
+    <input type="text" id="message" value="" onkeyup="show_result()"/>
+    <div id="result"></div>
+
+
+
+    <h3> bài hiển thị copy thành công</h3>
+    <p>Hãy copy dòng chữ dưới đây</p>
+    <div class="" oncopy="show_copy()">Tôi yêu bạn</div>
+    <script>
+        function show_copy(){
+            alert("Bạn đã copy dòng này");
+        }
+    </script>
+
+    <h3>viết ct tính tổng hai số nhập vào</h3>
+        <script language="javascript">
+          // Hàm tính kết quả
+          function tinh()
+          {
+            // Lấy 3 ô input
+            var a = document.getElementById("a");
+            var b = document.getElementById("b");
+            var result = document.getElementById("result1");
+             
+            // Tính tổng hai ô đầu tiên
+            var tong = parseInt(a.value) + parseInt(b.value);
+             
+            // Gán giá trị vào ô thứ ba
+            // Phải kiểm tra tổng hai số này có bị lỗi hay không
+            if (!isNaN(tong)){
+              result.value = tong;
+            }
+          }
+        </script>
+        a: <input type="text" id="a" value="" onkeyup="tinh()"/>
+        b: <input type="text" id="b" value="" onkeyup="tinh()"/>
+        Kết quả: <input type="text" id="result1" value=""/>
+
+
+        <h1>validate</h1>
+
+        <form action="" method="post">
+            Username: <input type="text" value="" name="username" id="username"/> <br/>
+            Password: <input type="text" value="" name="password" id="password"/> <br/>
+            RePassword: <input type="text" value="" name="re-password" id="re-password"/> <br/>
+            <input type="submit" value="Register" onclick="return validate()">
+        </form>
+        <script>
+            
+        </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <!-- DOM là document object model, mô hình đối tượng trong html
+        thông qua dom truy xuất đối tượng dễ dàng hơn
+        nhiệm vụ của dom là truy xuất, thay đổi thuộc tính, thay đổi css, tạo xóa sửa thẻ html .value là lấy giá trị 
+        document.getElementById("object").style.fontSize = 'something';
+        document.getElementById("object").style.lineHeight = 'something';
+        document.getElementById("object").style.marginBottom = 'something';
+        DOM node thêm sửa xóa 1 đối tượng html css, vd tạo thẻ p có text và vào vị trí body đầu tiền
+        var p = document.createElement("p"); khởi tạo thẻ p
+        p.innerHTML = "Học DOM Nodes tại freetuts.net" thêm text vào thẻ p
+        document.getElementsByTagName('body')[0].appendChild(p); thêm node vào web thẻ body đầu tiên vị trí 0 trong mảng
+
+        <body>
+        <script language="javascript">
+          
+          // Tạo mới một thẻ p
+          var p = document.createElement("p");
+          
+          // Thêm nội dung HTML vào thẻ p
+          p.innerHTML = "Học DOM Nodes tại freetuts.net"
+          
+          // Đưa thẻ P vào trong thẻ body
+          document.getElementsByTagName('body')[0].appendChild(p);
+          
+        </script>
+
+        DOM Node - document.createTextNode()
+        var p = document.createElement("p");
+        var text = document.createTextNode("Học DOM Nodes tại freetuts.net");
+        p.appendChild(text);
+        document.getElementsByTagName('body')[0].appendChild(p);
+
+        các phương thức khác
+        Phương thức appendChild() Dùng để thêm (bổ sung) vào vị trí cuối cùng của đối tượng một thẻ HTML nào đó.
+        <div id="TOP">
+        	Xin chào các bạn!  
+      	</div>
+      
+      	<input type="button" value="Append" id="btn-append"/>
+      
+        <script language="javascript">
+          // Lấy button
+          var button = document.getElementById("btn-append");
+          
+          // Thêm sự kiện click cho button
+          button.addEventListener("click", function(){
+          	// Tạo mới một thẻ h1
+            var h1 = document.createElement("h1");
+
+            // Thêm nội dung HTML vào thẻ h1
+            h1.innerHTML = "Học DOM Nodes tại freetuts.net"
+
+            // Đưa thẻ h1 vào trong thẻ div có id=TOP
+            document.getElementById('TOP').appendChild(h1);
+          });
+
+        Phương thức insertBefore()
+        Được dùng để thêm một Node vào đằng trước một node con nào đó. Phương thức này có hai tham số truyền vào insertBefore(node_insert, node_child), trong đó:
+        node_insert là node bạn muốn thêm vào
+        node_child là node con mà bạn muốn thêm vào đằng trước nó.         
+        Sự kiện mousemove trong Javascript (di chuyển chuột) bắt sự kiện được tọa độ của con trỏ chuột mỗi khi nó di chuyển, nó chỉ có công dụng trong phạm vi hiển thị của thẻ đó
+        cách sử dụng hàm adeventlistenter
+        object.addeventlisterner("mousemove",hanh_dong)
+        <body>
+      	<div id="content">
+        	<h5>Xin chào các bạn</h5>          
+          	<h5>chúc vui vẻ khi học bài</h5>
+      	</div>
+      
+      	<input type="button" value="View" id="btn-view"/>
+      
+        <script language="javascript">
+          // Lấy button
+          var button = document.getElementById("btn-view");
+          
+          // Thêm sự kiện click cho button
+          button.addEventListener("click", function(){
+          	// Tạo mới một thẻ h1
+            var h1 = document.createElement("h1");
+
+            // Thêm nội dung HTML vào thẻ h1
+            h1.innerHTML = "Chào mừng bạn đến với freetuts.net"
+
+            // Lấy thẻ ngoài cùng
+            var element = document.getElementById("content");
+            
+            // Lấy thẻ cần isertBefore
+            var element_child = document.getElementsByTagName("h5")[1];
+            
+            // Insert Before
+            element.insertBefore(h1, element_child);
+          });
+        </script>
+    </body>
+    Phương thức removeChild()
+    Được dùng để xóa một node con ra khỏi node hiện tại.
+        <body>
+      	<div id="content">
+          	<h5>chúc vui vẻ khi học bài</h5>
+      	</div>
+      
+      	<input type="button" value="Remove" id="btn-remove"/>
+      
+        <script language="javascript">
+          // Lấy button
+          var button = document.getElementById("btn-remove");
+          
+          // Thêm sự kiện click cho button
+          button.addEventListener("click", function(){
+          	
+            // Lấy thẻ cần remove
+            var need_remove = document.getElementsByTagName("h5")[0];
+            
+            // Remove
+            document.getElementById("content").removeChild(need_remove);
+          });
+        </script>
+    </body>
+
+    Phương thức replaceChild()
+    Dùng để replace (thay thế) một node con nào đó bằng một node khác mới hoàn toàn.
+    <body>
+      	<div id="content">
+          	<h5>chúc vui vẻ khi học bài</h5>
+      	</div>
+      
+      	<input type="button" value="Replace" id="btn-replace"/>
+      
+        <script language="javascript">
+          // Lấy button
+          var button = document.getElementById("btn-replace");
+          
+          // Thêm sự kiện click cho button
+          button.addEventListener("click", function(){
+          	
+            // Tạo mới một thẻ
+            var p = document.createElement("h1");
+            p.innerHTML = "Xin chào!";
+                
+            // Lấy thẻ cần replace
+            var replace = document.getElementsByTagName("h5")[0];
+            
+            // Replace
+            document.getElementById("content").replaceChild(p, replace);
+          });
+        </script>
+    </body>
+        -->
+        <!-- <div id="container" style="height: 500px; background: blue">
+
+        </div>
+        <p>Tọa độ X: <span id="x"></span> - Tọa độ Y: <span id="y"></span></p>
+        <script>
+        
+            var object = document.getElementById('container');
+            object.addEventListener('mousemove', function(a){
+                var x = a.clientX;
+                var y = a.clientY;
+                document.getElementById("x").innerHTML = x;
+                document.getElementById("y").innerHTML = y;
+            });
+        </script> -->
+
+        <!-- Sự kiện Submit Form trong Javascript sự kiện giúp bạn kiểm soát hành động submit form của người dùng khi họ click vào button submit
+
+        <form method="post" action="" onsubmit="return false">
+            <input type="submit" value="Submit"/>
+        </form>
+        
+        trả về true thì submit form có hiệu ứng
+        còn false thì click vào button không có hiệu ứng gì
+        cách sử dụng phương thức adeventlistener
+        formObj.addEventListener("submit", functionName);
+
+         -->
+         <!-- <form method="post" action="" id="myform">
+            <input type="button" onclick="submitForm()" value="Button"/>
+        </form>
+        <script>
+            function submitForm(){
+                document.getElementById('myform').submit();
+            }
+
+            return TRUE/FALSE trong Javascript kết quả trả về của hàm 
+
+
+        </script> -->
+</body>
+</html>

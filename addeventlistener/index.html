@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="Click me" id="btn">
+    <script>
+    // var obj = document.getElementById("btn");
+    // obj.addEventListener("click",function(){
+    //     alert("bạn đã đúp chuột vài thẻ input này");
+    // })
+
+    var obj = document.querySelector("#btn");
+    obj.addEventListener("click",function(){
+        alert ("bạn đã click vào thẻ input này");
+    })
+    </script>
+
+
+
+    <input type="text" name="" id="text">
+    <div id="result"></div>
+    <script>
+        // var input = document.getElementById("text");
+        // input.addEventListener("keyup",function(){
+        //     document.getElementById("result").innerHTML=input.value;
+        // })
+
+        var input = document.querySelector("#text")
+            input.addEventListener("keyup",function(){
+            document.querySelector("#result").innerHTML=input.value;}
+
+            )
+        
+    </script>
+
+    <h1>kí tự hơn 5 thông báo</h1>
+    
+</body>
+</html>
