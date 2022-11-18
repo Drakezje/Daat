@@ -138,6 +138,24 @@ Math object đối tượng toán học đã đượng định nghĩa sẵn rồ
 
 //     return result;
 // }
+// function run (fruits){
+//     var result;
+//     switch(fruits){
+//         case "Banana":
+//             result = "This is banana";
+//             break;
+//         case "Apple":
+//             result = "This is apple";
+//             break;
+//         case "Orange":
+//             result = "This is orange";
+//             break;
+//         default:
+//             result = "No fruits";
+//     }
+//     return result;
+// };
+// console.log(run())
 
 
 //toán tử 3 ngôi 3 vế
@@ -158,7 +176,9 @@ Math object đối tượng toán học đã đượng định nghĩa sẵn rồ
 // var a = 1;
 // var b = 2;
 // var c = a > 0 ? a : b; // a > 0 thì c = a ngược lại lấy giá trị của b
-
+// var c = a > b ? "Lớn hơn" : "Không lớn hơn"
+// a> b ? "" : ""
+// console.log(c);
 
 //vòng lặp - loop
 /* 
@@ -175,6 +195,9 @@ do/while lặp ít nhất 1 lần, sau đó lặp khi điều kiện đúng
 //     //code 
 //     console.log('Đây là for' , i );
 // }
+// for ( i = 1 ; i <= 100 ; i ++){
+//     console.log("", i);
+// }
 /**
  * Hết sức lưu ý: Hãy suy nghĩ kỹ để đảm bảo vòng lặp (loop)
  * luôn có điểm dừng, trình duyệt của bạn sẽ bị treo
@@ -190,6 +213,7 @@ do/while lặp ít nhất 1 lần, sau đó lặp khi điều kiện đúng
 // for( i = 0; i< a. length; i++){
 //     console.log(a[i]);
 // }
+
 // function getRandNumbers(min, max, length) {
 //     var arr = []
 //     for (var i = 0; i < length; i++) {
@@ -197,9 +221,16 @@ do/while lặp ít nhất 1 lần, sau đó lặp khi điều kiện đúng
 //     }
 //     return arr
 // }
+// console.log(getRandNumbers(50, 100, 1));
 
-
-// console.log(getRandNumbers(2, 100, 4));
+// function getRandNumbers (min, max , length) {
+//     arr  = [];
+//     for (var i = 0; i < length; i++) {
+//         arr[i] = Math.random() * (max - min) + min 
+//     }
+//     return arr;
+// }
+// console.log(getRandNumbers(5, 100, 1));
 
 // for ( i = 1 ; i <= 1000; i++ ){
 //     console.log(i);
@@ -211,11 +242,11 @@ do/while lặp ít nhất 1 lần, sau đó lặp khi điều kiện đúng
 //         results += arr[i];       
 //     }return results;
 // }
-
 // // Expected results
 // console.log(getTotal([1, 2, 3])) // Output: 6
 // getTotal([4, 5, -3]) // Output: 6
 // getTotal([4, 5, 3, 5]) // Output: 17
+
 
 // var myArr=[
 //     'Js',
@@ -254,16 +285,16 @@ do/while lặp ít nhất 1 lần, sau đó lặp khi điều kiện đúng
 // console.log(getTotal(orders)) // Output: 8700000
 
 
-//for in loop
-// dùng để lấy key của đổi tượng
-// var myInfo={
-//     name:'Thanh Dat',
-//     age : 23,
-//     address: 'HN'
-// }
+// for in loop
+// dùng để lấy key của đổi tượng 
+var myInfo={
+    name:'Thanh Dat',
+    age : 23,
+    address: 'HN'
+}
 // var languages = 'JavaScript';
 // for(var key in myInfo){
-//     console.log(key);
+//     console.log(myInfo[key]);
 // }
 // for (var key in languages){
 //     console.log(languages[key]);
@@ -276,10 +307,10 @@ do/while lặp ít nhất 1 lần, sau đó lặp khi điều kiện đúng
 //     }return arr;
 // }
 
-// //array push thêm phần từ vào mảng
+//array push thêm phần từ vào mảng
 
-// // // Expected results:
-// console.log(run({ name: 'Nguyen Van A', age: 16 }));
+// // Expected results:
+// console.log(run({ name: 'Nguyen Van A', age: 16 , addres : "ha noi"}));
 // // Output:
 // // [
 // //     "Thuộc tính name có giá trị Nguyen Van A",
@@ -429,41 +460,43 @@ map // muỐn chỉnh sửa element của 1 array
 reduce //muốn nhận về 1 giá trị duy nhất sau khi tính toán
 đều có tham số truyền là 1 hàm
 */
-// var courses = [
-//     {
-//         id: 1,
-//         name:'Javascript',
-//         coin:250
-//     },
-//     {
-//         id: 2,
-//         name:'Html,css',
-//         coin:0
-//     },
-//     {
-//         id: 3,
-//         name:'Ruby',
-//         coin:300
-//     },
-//     {
-//         id: 4,
-//         name:'Php',
-//         coin:400
-//     },
-//     {
-//         id: 5,
-//         name:'Reactjs',
-//         coin:500
-//     },
-//     {
-//         id: 6,
-//         name:'Ruby',
-//         coin:600
-//     },
-// ];
+var courses = [
+    {
+        id: 1,
+        name:'Javascript',
+        coin:250
+    },
+    {
+        id: 2,
+        name:'Html,css',
+        coin:100
+    },
+    {
+        id: 3,
+        name:'Ruby',
+        coin:300
+    },
+    {
+        id: 4,
+        name:'Php',
+        coin:400
+    },
+    {
+        id: 5,
+        name:'Reactjs',
+        coin:500
+    },
+    {
+        id: 6,
+        name:'Ruby',
+        coin:600
+    },
+];
 // courses.forEach(function(index,course){
 //     console.log(course,index);
 // });
+
+// every tìm tất cả thỏa mãn điều kiện, some một số thỏa mãn, find tìm phần tử đầu tiên, filter tìm tất cả phần tử có thỏa mãn
 
 // var isFree=courses.every(function(course,index){
 //     return course.coin === 0;
@@ -507,6 +540,9 @@ reduce //muốn nhận về 1 giá trị duy nhất sau khi tính toán
 //     })
 //     return filter;
 // }
+// var Favsports = sports.filter(function(sport,index){
+//     return sport.like >= 5
+// })
 
 //array map() method, method là 1 function, 
 //và nó là 1 function của 1 đối tượng, return về 1 mảng mới,
@@ -522,9 +558,18 @@ reduce //muốn nhận về 1 giá trị duy nhất sau khi tính toán
 //         index:index,
 //     };
 // }
+// function courseHandler(course,index){
+//     return {
+//         id : course.id,
+//         name : `Khóa khóa học học ${course.name}`,
+//         coin : course.coin,
+//         coinText: `Giá ${course.coin}`
+//     }
+// }
 
-
-// var newCourses = courses.map(courseHandler);
+// // var newCourses = courses.map(courseHandler);
+// // console.log(newCourses);
+// var newCourses = courses.map(courseHandler)
 // console.log(newCourses);
 
 //array reduce () method
@@ -555,6 +600,10 @@ reduce //muốn nhận về 1 giá trị duy nhất sau khi tính toán
 // var totalCoin = courses.reduce(function(total,course){
 //     return total + course.coin;
 // },0) //initial value giá trị không bắt buộc, có hoặc ko có đều được,
+// console.log(totalCoin);
+// var totalCoin = courses.reduce(function(total,course){
+//     return total + course.coin;
+// },0)
 // console.log(totalCoin);
 
 //flat làm phẳng mảng từ depth array - mảng sâu
