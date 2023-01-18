@@ -1,6 +1,5 @@
 /* 
 Math object đối tượng toán học đã đượng định nghĩa sẵn rồi
-
 -Math.PI số pi
 -Math.round() làm tròn 
 -Math.abs() giá trị tuyệt đối -4 = 4
@@ -16,6 +15,7 @@ Math object đối tượng toán học đã đượng định nghĩa sẵn rồ
 
 // var random = Math.floor(Math.random()*5);
 
+
 // var bonus = [
 //     '10 coins',
 //     '20 coins',
@@ -27,12 +27,9 @@ Math object đối tượng toán học đã đượng định nghĩa sẵn rồ
 // console.log(bonus[random]);
 // if(random < 5){
 //     console.log('Cường hóa thành công');
-
 // }
 
-
 /* câu lệnh rẽ nhánh if else */
-
 // var date = 9;
 
 // if(date === 2){
@@ -61,9 +58,8 @@ Math object đối tượng toán học đã đượng định nghĩa sẵn rồ
 // Khi a chia hết cho 5 thì return về 2
 // Khi a chia hết cho 15 thì return về 3
 
-// toán tử && and toán tử || toán tử or toán tử ! là phủ định
+// toán tử && and toán tử(tra ve true neu 2 dung) || toán tử or toán tử(true neu 1 trong 2 dung) ! là phủ định
 // function run(a) {
-    
 //     if ((a % 3 == 0 ) && (a % 5 !== 0))  {
 //         return 1;
 //     } else if ((a % 5 == 0 ) && (a % 3 !== 0)) {
@@ -71,8 +67,8 @@ Math object đối tượng toán học đã đượng định nghĩa sẵn rồ
 //     } else if (a % 15 == 0) {
 //         return 3;
 //     }
-
 // }
+
 // function run(a){
 //     if ((a % 3 == 0) && (a % 5 !== 0)){
 //         return 1;
@@ -90,7 +86,6 @@ Math object đối tượng toán học đã đượng định nghĩa sẵn rồ
 // switch cấu trúc rẽ nhánh
 
 // var date=5;
-
 // switch(date){
 //     case 2:
 //         console.log('Hôm nay là thứ 2');
@@ -180,6 +175,9 @@ Math object đối tượng toán học đã đượng định nghĩa sẵn rồ
 // a> b ? "" : ""
 // console.log(c);
 
+// var c = a > 0 ? a : b
+// console.log(c);
+
 //vòng lặp - loop
 /* 
 for lặp với điều kiện đúng
@@ -210,27 +208,24 @@ do/while lặp ít nhất 1 lần, sau đó lặp khi điều kiện đúng
  * => Treo trình duyệt!!!
  */
 // var a = ['dat','uyen','van'];
-// for( i = 0; i< a. length; i++){
+// for(var i = 0; i < a.length; i ++){
 //     console.log(a[i]);
 // }
-
-// function getRandNumbers(min, max, length) {
-//     var arr = []
+// function getRandNumbers1(min, max, length) {
+//     var array = new Array()
 //     for (var i = 0; i < length; i++) {
-//         arr[i] = Math.random() * (max - min) + min
+//         array.push(Math.random() * (max - min) + min)
 //     }
-//     return arr
+//     return array
 // }
-// console.log(getRandNumbers(50, 100, 1));
+// console.log((getRandNumbers1(1,10,2)));
 
-// function getRandNumbers (min, max , length) {
-//     arr  = [];
-//     for (var i = 0; i < length; i++) {
-//         arr[i] = Math.random() * (max - min) + min 
-//     }
-//     return arr;
+// function getRandNumbers(min,max) {
+//     let number = min + Math.random() * (max - min);
+//     console.log("So ngau nhien", number); 
 // }
-// console.log(getRandNumbers(5, 100, 1));
+// getRandNumbers(1,10)
+
 
 // for ( i = 1 ; i <= 1000; i++ ){
 //     console.log(i);
@@ -240,7 +235,15 @@ do/while lặp ít nhất 1 lần, sau đó lặp khi điều kiện đúng
 //     var results = 0;
 //     for (var i = 0; i < arr.length;i++){
 //         results += arr[i];       
-//     }return results;
+//     }
+//     return results;
+// }
+// function getTotal(arr) {
+//     var results = 0;
+//     for (var i = 0 ; i < arr.length ; i++){
+//         results += arr[i];
+//     }
+//     return results;
 // }
 // // Expected results
 // console.log(getTotal([1, 2, 3])) // Output: 6
@@ -280,18 +283,17 @@ do/while lặp ít nhất 1 lần, sau đó lặp khi điều kiện đúng
 //     return results;
 // }
 
-
 // // Expected results:
 // console.log(getTotal(orders)) // Output: 8700000
 
 
 // for in loop
-// dùng để lấy key của đổi tượng 
-var myInfo={
-    name:'Thanh Dat',
-    age : 23,
-    address: 'HN'
-}
+// dùng để lấy  key của đổi tượng 
+// var myInfo={
+//     name:'Thanh Dat',
+//     age : 23,
+//     address: 'HN'
+// }
 // var languages = 'JavaScript';
 // for(var key in myInfo){
 //     console.log(myInfo[key]);
@@ -307,15 +309,15 @@ var myInfo={
 //     }return arr;
 // }
 
-//array push thêm phần từ vào mảng
+// // array push thêm phần từ vào mảng
 
 // // Expected results:
 // console.log(run({ name: 'Nguyen Van A', age: 16 , addres : "ha noi"}));
-// // Output:
-// // [
-// //     "Thuộc tính name có giá trị Nguyen Van A",
-// //     "Thuộc tính age có giá trị 16"
-// // ]
+// Output:
+// [
+//     "Thuộc tính name có giá trị Nguyen Van A",
+//     "Thuộc tính age có giá trị 16"
+// ]
 
 
 // function find_max_min(a, b, c ){
@@ -390,11 +392,11 @@ var myInfo={
 // }
 
 //nested loop vòng lặp lồng nhau
-// var myArr=[
-//     [1,2],
-//     [3,4],
-//     [5,6]
-// ];
+var myArr=[
+    [1,2],
+    [3,4],
+    [5,6]
+];
 
 // for(var i = 0 ; i < myArr.length; i++){
 //     for(var j = 0; j < myArr[i].length; j ++){
@@ -402,6 +404,9 @@ var myInfo={
 //     }
 // }//vòng cha lấy ra mảng con, vòng con lấy ra phần tử trong mảng con
 
+// for(var i= 0 ; i < myArr.length; i++){
+//     console.log(myArr[]);
+// }
 
 // ví dụ về vòng lặp // loop...
 //100 về 1
@@ -458,6 +463,7 @@ find // để tìm kiếm 1 phần tử thỏa mãn
 filter // tìm kiếm hết phần tử thỏa mãn
 map // muỐn chỉnh sửa element của 1 array
 reduce //muốn nhận về 1 giá trị duy nhất sau khi tính toán
+push // đẩy vào mảng
 đều có tham số truyền là 1 hàm
 */
 var courses = [
@@ -492,10 +498,10 @@ var courses = [
         coin:600
     },
 ];
-// courses.forEach(function(index,course){
-//     console.log(course,index);
-// });
 
+// courses.forEach(function(course,index){
+//     console.log(course);
+// })
 // every tìm tất cả thỏa mãn điều kiện, some một số thỏa mãn, find tìm phần tử đầu tiên, filter tìm tất cả phần tử có thỏa mãn
 
 // var isFree=courses.every(function(course,index){
@@ -544,33 +550,25 @@ var courses = [
 //     return sport.like >= 5
 // })
 
-//array map() method, method là 1 function, 
+//array map() method, method là 1 function, muốn thay đổi chính sửa element của 1 array
 //và nó là 1 function của 1 đối tượng, return về 1 mảng mới,
 // số lượng phần từ ngang nhau
 // bài toán thay đổi name khóa học thành 'Khóa học:'
 //cách lấy name khóa học course.name
-// function courseHandler(course,index){
-//     return {
-//         id: course.id,
-//         name: `Khóa học:${course.name}`,
-//         coin:course.coin,
-//         coinText:`Giá ${course.coin}`,
-//         index:index,
-//     };
-// }
-// function courseHandler(course,index){
-//     return {
-//         id : course.id,
-//         name : `Khóa khóa học học ${course.name}`,
-//         coin : course.coin,
-//         coinText: `Giá ${course.coin}`
-//     }
-// }
+function courseHandler(course,index){
+    return {
+        id: course.id,
+        name: `Khóa học:${course.name}`,
+        coin:course.coin,
+        coinText:`Giá ${course.coin}`,
+        index:index,
+    };
+}
 
-// // var newCourses = courses.map(courseHandler);
-// // console.log(newCourses);
-// var newCourses = courses.map(courseHandler)
-// console.log(newCourses);
+
+var newCourses = courses.map(courseHandler);
+console.log(newCourses);
+
 
 //array reduce () method
 //tổng số coin
