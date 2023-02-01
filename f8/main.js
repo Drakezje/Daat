@@ -87,4 +87,48 @@ cách 1 khoảng tab \t
 18. template es6 cộng chuỗi
 console.log(`tổi là : ${frist name} + ${last name}`)
 
+19.làm việc với chuỗi
+length độ dài chuỗi
+find index tìm chuỗi, nếu thấy trả về vị trí (vị trí bd từ 0),else trả về -1
+.indexof ('chuỗi cần tìm','vị trí bđ tìm nếu ko có mặc định từ đầu')
+.lastindexof tìm vị trí cuối ngược ra vị trí đầu
+.sreach tìm kiếm theo biểu thức chính quy, ko hộ trợ nhập vị trí tìm kiếm như indexof
+
+cut string
+.slice(start,end)
+trái qua phải str -> end
+phải qua trái str -> end-
+
+.replace("chữ cần thay ","chữ mong muốn")
+
+convert to uppercase
+.toUpperCase()
+lowercase 
+.lowercase
+
+trim loại bỏ khoảng trắng thừ
+.trim
+
+.split("điểm chung để cắt hoặc chuỗi rỗng")
+get a character by index
+.charat(index)
+hoặc tên biến[index]
+
+20.làm việc với số
+number.isfinite() xđ xem giá trí cho có phải số hữu hạn hay không, trả về boolean
+number.inInteger() xđ xem giá trị có phải số nguyên hay không trả về boolean
+number.parsefloat() chuyển đổi chuỗi đã cho thành số nguyên
+number.prototype.toFixed() chuyển đổi và trả về chuỗi đại diện cho số đã cho, có số chữ số chính xác sau dấu thập phân, trả về kiểu string
+number.prototype.toString() chuyển đổi và trả về số đã cho dưới dạng chuỗi
+
+21. cách tạo số
+tạo binh thường
+dùng new number()
+
+22.type of Nan = number
+
+23.Mảng trong js có thể chứa nhiều loại dữ liệu cùng lúc
+
+
+
 */
