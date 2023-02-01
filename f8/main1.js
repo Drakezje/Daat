@@ -499,9 +499,9 @@ var courses = [
     },
 ];
 
-// courses.forEach(function(course,index){
-//     console.log(course);
-// })
+courses.forEach(function(course,index){
+    console.log(course);
+})
 // every tìm tất cả thỏa mãn điều kiện, some một số thỏa mãn, find tìm phần tử đầu tiên, filter tìm tất cả phần tử có thỏa mãn
 
 // var isFree=courses.every(function(course,index){
