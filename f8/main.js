@@ -128,7 +128,6 @@ dùng new number()
 22.type of Nan = number
 
 23.Mảng trong js có thể chứa nhiều loại dữ liệu cùng lúc
-
 24. CÁCH tạo mảng
 tạo như bthg 
 var a = new Array('js','ruby','php')
@@ -155,9 +154,6 @@ trả về hợp nhất, nhưng arr gốc và arr cần hợp nhất vẫn giữ
 .slice(1,0) cắt từ vị trí 1 đến hết mảng
 .slice(0) copy mảng
 .slice(-2,-1)
-
-
-
 
 
 */
