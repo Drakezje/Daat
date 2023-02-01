@@ -129,6 +129,35 @@ dùng new number()
 
 23.Mảng trong js có thể chứa nhiều loại dữ liệu cùng lúc
 
+24. CÁCH tạo mảng
+tạo như bthg 
+var a = new Array('js','ruby','php')
+
+25.type of mảng trả về object
+
+26. kiểm tra 1 đối tượng có phải mảng hay không dùng array.isarray(value name)
+27. các phương thức làm việc với mảng array
+.tostring(value) chuyển array sang chuỗi, mặc định sẽ xuất hiện dấu , và ko thể sửa
+.join(value) chuển arr sang chuỗi tham số truyền vào chính là ngăn cách giứa các phần tử .join('')
+.pop() xóa phần tử cuối mảng và trả về phần tử đã xóa
+ko có phần tử trả về undefined
+.push(value) thêm 1 hoặc nhiều phần tử ở cuối mảng, trả về độ dài mới của mảng
+.shift(value) xóa đi 1 phần tử đầu mảng trả về phần từ đã xóa
+.unshift(value) thêm 1 nhiều phần tử ở đầu mảng, trả về độ dài mới của mảng
+.spilce(value) có thể xóa,cắt,chèn phần tử vào mảng
+xóa .spilce(indexbegin,deletcount)
+chèn .spilce(indexbegin,0,'itemName) nếu để số #0 thì là vừa xóa vừa chèn
+.concat() nối arr với nhau và trả về arr hợp nhất
+arr_gốc.concat(arr cần hợp nhất)
+trả về hợp nhất, nhưng arr gốc và arr cần hợp nhất vẫn giữ nguyên
+.slice() cắt phần tử, cũng có thể điền số âm
+.slice(bắt đầu,vị trí đc cắt)
+.slice(1,0) cắt từ vị trí 1 đến hết mảng
+.slice(0) copy mảng
+.slice(-2,-1)
+
+
+
 
 
 */
