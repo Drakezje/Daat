@@ -155,5 +155,73 @@ trả về hợp nhất, nhưng arr gốc và arr cần hợp nhất vẫn giữ
 .slice(0) copy mảng
 .slice(-2,-1)
 
+28. foreach duyệt qua từng phần tử của mảng
+var_name.foreach(function(name){
+
+})
+VD:
+courses.forEach(function(course, index, array) {
+ console.log(index, course, array);
+});
+Kết quả:
+0 {id: 1, name: 'Javascript', coin: 250}
+1 {id: 2, name: 'HTML, CSS', coin: 0}
+2 {id: 3, name: 'Ruby', coin: 0}
+3 {id: 4, name: 'PHP', coin: 400}
+4 {id: 5, name: 'ReactJS', coin: 500}
+
+every() kiểm tra tất cả phần tử của mảng thỏa mãn 1 điều gì đó, chỉ cần 1 phần tử không thỏa mãn về false
+var isFree = courses.every(function(course, index) {
+ return course.coin === 0;
+});
+console.log(isFree);
+Kết quả:
+false
+
+some(): tương tự every(), nhưng chỉ cần 1 phần tử thỏa mãn điều kiện thì
+trả về true
+
+find(): tìm kiếm phần tử đầu tiên tìm thấy trong mảng, nếu không có thì trả
+về undefined
+VD:
+var isFree = courses.find(function(course, index) {
+ return course.name === 'Ruby';
+});
+console.log(isFree);
+Kết quả:
+{id: 3, name: 'Ruby', coin: 0}
+
+fillter(): tương tự find, nhưng trả về tất cả phần tử thỏa mãn
+
+map(): Tạo ra 1 mảng mới giống mảng cũ, tuy nhiên chúng ta có thể thêm
+các trường, xóa trường, cập nhật data, ...
+Map() sẽ duyệt qua từng phần tử của mảng, khi gặp mỗi phần tử sẽ gọi lại
+function được truyền trong map()
+VD:
+function courseHandler(course, index) {
+ return {
+
+ id: course.id,
+ name: `Khóa học ${course.name}`,
+ coin: course.coin,
+ coinText: `Giá ${course.coin}`,
+ originArray: courses
+ }
+}
+var newCourses = courses.map(courseHandler);
+console.log(newCourses);
+Kết quả:
+0: {id: 1, name: 'Khóa học Javascript', coin: 250, coinText: 'Giá 250', originArray:
+Array(5)}
+1: {id: 2, name: 'Khóa học HTML, CSS', coin: 0, coinText: 'Giá 0', originArray:
+Array(5)}
+2: {id: 3, name: 'Khóa học Ruby', coin: 0, coinText: 'Giá 0', originArray: Array(5)}
+3: {id: 4, name: 'Khóa học Ruby', coin: 400, coinText: 'Giá 400', originArray:
+Array(5)}
+4: {id: 5, name: 'Khóa học ReactJS', coin: 500, coinText: 'Giá 500', originArray:
+Array(5)}
+
+
+
 
 */
