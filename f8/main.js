@@ -3,6 +3,32 @@
 // anh sẽ dùng cái tết này để cho nó biết nó vinh dự thế nào
 // ai là con bitch của anh nào ??:D??
 
+var courses = [
+    {
+        id: 1,
+        name: 'Javascript',
+        coin: 100
+    },
+    {
+        id: 2,
+        name: 'Javascript',
+        coin: 200
+    },
+    {
+        id: 3,
+        name: 'Javascript',
+        coin: 300
+    }, {
+        id: 4,
+        name: 'Javascript',
+        coin: 400
+    }, {
+        id: 5,
+        name: 'Javascript',
+        coin: 500
+    },
+];
+
 /* 
 1. toán tử số học + - * /
     toán tử gắn = ; a=b; a = 1;
@@ -221,7 +247,123 @@ Array(5)}
 4: {id: 5, name: 'Khóa học ReactJS', coin: 500, coinText: 'Giá 500', originArray:
 Array(5)}
 
+Giải thích:
+accumulator: giá trị lưu trữ
+currentValue: giá trị phần tử trong mảng hiện tại
+currentValue.coin: giá trị coin trong mảng ở vị trí hiện tại
+currentIndex: chỉ số hiện tại
+originArray: mảng gốc (nếu thay đổi thì mảng courses cũng thay đổi vì tụi nó
+cùng trỏ vào 1 vị trí trong bộ nhớ)
+phương thức reduce() truyền vào 2 tham số là function, và giá trị khởi tạo lưu
+trữ (giá trị này không bắt buộc)
 
+Nếu không truyền initalValue thì sẽ gán phần tử đầu tiên trong mảng là giá trị
+tích trữ (accumulator), phần tử tiếp theo là currentValue
+Nếu truyền initalValue thì initalValue là accumulator, phần tử đầu tiên trong
+mảng là currentValue
 
+// function coinHandler(accumulator, currentValue, currentIndex, originArray) {
+//     var total = accumulator + currentValue.coin;
+//     console.log(total);
+//     return total;
+//     }
+//     var totalCoin = courses.reduce(coinHandler, 0);
+
+BÀI TẬP HUYỀN THOẠI: LÀM PHẲNG MẢNG TỪ DEPTH ARRAY
+var depthArray = [1, 2, [3, 4], 5, 6, [7, 8, 9]];
+var flatArray = depthArray.reduce(function(flatOutput, depthItem){
+ return flatOutput.concat(depthItem);
+}, []);
+console.log(flatArray);
 
 */
+// var bonus = [
+//     "10 coins",
+//     "20 coins",
+//     "30 coins",
+//     "40 coins",
+//     "50 coins",
+// ];
+// var random = Math.floor(Math.random()*5);
+// console.log(bonus[random]);
+
+// var date = 9;
+// if (date === 2){
+//     console.log("Hôm nay là thứ 2");
+// }else if (date === 3){
+//     console.log("Hôm nay là thứ 3");
+// }else{
+//     console.log("Không biết");
+// }
+
+// function run(a) {
+//     if ((a % 3 == 0 ) && (a % 5 !== 0))  {
+//         return 1;
+//     } else if ((a % 5 == 0 ) && (a % 15 !== 0)) {
+//         return 2;
+//     } else if (a % 15 == 0) {
+//         return 3;
+//     }
+// }
+
+// console.log(run(9));
+
+
+// var date = 5;
+// switch(date){
+//     case 1  :
+//         console.log("Hôm nay là thứ 2");
+//         break;
+//     case 2:
+//         console.log("Hôm nay là thứ 3");
+//         break;
+//     case 3:
+//         console.log("Hôm nay là thứ 4");
+//         break;
+//     default:
+//         console.log("Không biết");
+// }
+
+// function run (fruits){
+//     var result;
+//     switch(fruits){
+//         case"Banana":
+//         result = "Banana";
+//         break;
+//         case"Orange":
+//         result = "Orange";
+//         break;
+//         case"Apple":
+//         result = "Apple";
+//         break;
+//         default:
+//             result = "No fruits";
+//     }
+//     return result;
+// }
+// console.log(run("Orange"));
+
+// toán tử 3 ngôi
+// var a = 1;
+// var b = 2;
+// var c = a >b ? 1 : 2;
+
+// console.log(c);
+
+// toán tử 3 ngôi
+// " ?" điều kiện  " :" hoặc và || hoặc ngắn gọn
+//condition ? expression1 : expression2
+// let status = true;
+// let result = status === true ? "Đúng" : "Sai";
+// console.log(result); // Output: "Đúng"
+
+// for(i =1 ; i <= 100; i ++){
+//     console.log("Đây là for ", i);
+// }
+
+
+// var a = ["date", "uyen", "van"]
+// for(i = 0 ; i < a.length; i ++) {
+//     console.log(a[i]);
+// }
+
