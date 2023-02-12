@@ -367,3 +367,22 @@ console.log(flatArray);
 //     console.log(a[i]);
 // }
 
+//lấy số ngẫu nhiên min max
+// function getRandNumbers1(min, max, length) {
+//     var array = [];
+//     for (var i = 0; i < length; i++) {
+//         array.push(Math.random() * (max - min) + min)
+//     }
+//     return array
+// }
+// console.log(getRandNumbers1(1,10,9));
+
+function getRandomNumber(min,max,length){
+    var arr = [];
+    for(var i = 0; i <length; i ++){
+        arr[i] = (Math.random()* (max - min ) + min )
+    }
+    return arr;
+}
+console.log(getRandomNumber(1,5,4));
+
