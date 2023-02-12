@@ -377,12 +377,36 @@ console.log(flatArray);
 // }
 // console.log(getRandNumbers1(1,10,9));
 
-function getRandomNumber(min,max,length){
-    var arr = [];
-    for(var i = 0; i <length; i ++){
-        arr[i] = (Math.random()* (max - min ) + min )
-    }
-    return arr;
-}
-console.log(getRandomNumber(1,5,4));
+// function getRandomNumber(min,max,length){
+//     var arr = [];
+//     for(var i = 0; i <length; i ++){
+//         arr[i] = (Math.random()* (max - min ) + min )
+//     }
+//     return arr;
+// }
+// console.log(getRandomNumber(1,5,4));
 
+
+// for( var i = 0 ; i <= 100; i ++){
+//     console.log(`Thự tự: ${i}`);
+// }
+
+//tính tổng tất cả
+// function getTotal(a){
+//     var result = 0;
+//     for(var i = 0; i < a.length; i++) {
+//         result += a[i]
+//     }
+//     return result;
+// }
+// console.log(getTotal([1,2,3]));
+
+// function tinhtong(){
+//     var a = [1,2,3]
+//     var result = 0;
+//     for(var i = 0 ; i < a.length; i ++){
+//         result += a[i];
+//     }
+//     return result;
+// }
+// console.log(tinhtong());
