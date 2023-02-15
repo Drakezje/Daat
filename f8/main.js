@@ -410,3 +410,49 @@ console.log(flatArray);
 //     return result;
 // }
 // console.log(tinhtong());
+
+// courses.forEach(function(course,index){
+//     console.log(course);
+// })
+
+// for(var i = 0 ; i <= 10 ; i ++){
+//     if(i % 2 == 0){
+//         console.log(i);
+//     }
+// }
+
+
+// //vòng lập lồng nhau
+// var myArr2= [1,2,3,4]
+var myArr= [
+    [1,2],
+    [3,4],
+    [5,6]
+];
+// // for(var i = 0 ; i < myArr.length; i++){
+// //     for(var j = 0; j < myArr[i].length; j ++){
+// //         console.log(myArr[i][j])
+// //     }
+// // }//vòng cha lấy ra mảng con, vòng con lấy ra phần tử trong mảng con
+// for(var i = 0; i < myArr.length; i++){
+//     for(var j = 0 ; j < myArr[i].length;j++){
+//         console.log(myArr[i][j]);
+//     }
+// }
+
+//bảng cửu chương
+// for (var i = 2; i <= 9; i++) {
+//     for (var j = 1; j <= 10; j++) {
+//         console.log(`${i} x ${j} = ${i * j}`);
+//     }
+//     console.log("\n");
+// }
+//nested loop
+// for(var i = 0 ; i < myArr.length; i ++){
+//     for(j = 0 ; j<myArr[i].length;j++){
+//         console.log(myArr[i][j]);
+        
+//     }
+// }
+
+//các vòng for
