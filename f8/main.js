@@ -377,12 +377,56 @@ console.log(flatArray);
 // }
 // console.log(getRandNumbers1(1,10,9));
 
-function getRandomNumber(min,max,length){
-    var arr = [];
-    for(var i = 0; i <length; i ++){
-        arr[i] = (Math.random()* (max - min ) + min )
-    }
-    return arr;
-}
-console.log(getRandomNumber(1,5,4));
+// function getRandomNumber(min,max,length){
+//     var arr = [];
+//     for(var i = 0; i <length; i ++){
+//         arr[i] = (Math.random()* (max - min ) + min )
+//     }
+//     return arr;
+// }
+// console.log(getRandomNumber(1,5,4));
+
+// function getRandomNumber(min,max,length){
+//     var arr = [];
+//     for(var i = 0; i < length; i ++){
+//         arr.push(Math.random()*(max-min)+min)
+//     }
+//     return arr;
+// }
+// console.log(getRandomNumber(1,5,5));
+
+// for(var  i = 2 ; i<=9; i++){
+//     for(var j = 1 ; j <=10; j++){
+//         console.log(`${i} x ${j} = ${i*j}`);
+//     }
+//     console.log("\n");
+// }
+
+
+// var number  = [1,2,3,4,5];
+// var sum = 0;
+// // for(var numbers of number){
+// //     sum += numbers
+// // }
+// // console.log(sum);
+
+// number.forEach(numbers => {
+//     sum += numbers
+// });
+// console.log(sum);
+
+
+
+// var isFree = courses.every(course =>{
+//     return course.coin ===0
+// })
+// console.log(isFree); //nếu như tất cả = 0 thì true
+
+// var isFree = courses.some(course=>{
+//     return course.coin ===0
+// })
+// console.log(isFree);//1 trong  === 0 thì true
+
+
+
 
