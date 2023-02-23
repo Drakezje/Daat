@@ -113,6 +113,7 @@ cách 1 khoảng tab \t
 18. template es6 cộng chuỗi
 console.log(`tổi là : ${frist name} + ${last name}`)
 
+<<<<<<< Updated upstream
 19.làm việc với chuỗi
 length độ dài chuỗi
 find index tìm chuỗi, nếu thấy trả về vị trí (vị trí bd từ 0),else trả về -1
@@ -503,3 +504,59 @@ var myArr= [
 // }
 
 //các vòng for
+=======
+19.
+length độ dài chuỗi
+find index tìm chuỗi, nếu thấy trả về vị trí (0 defaut), else trả về -1
+indexOf ('chuỗi cần tìm', vị trí bắt đầu tìm nếu ko thì mặc định tìm tự đầu)
+.lastIndexOf tìm từ vị trí cuối ngược ra vị trí đầu
+.search tìm theo biểu thức chính quy, không hỗ trợ nhập vị trí tìm kiếm như indexOf
+
+cut string
+.slice(start,end)
+cắt từ trái qua phải : start and end dương
+cắt từ phải qua trái : start and end âm
+
+replace
+.replace ('chữ cần thay','chữ mong muốn')
+
+convert to upper case
+.toUppercase
+
+convert to low case
+.toLowerCase
+
+trim loại bỏ khoảng trắng
+.trim
+
+split cắt 1 chuỗi thành array
+.spilit(điểm chung hoặc chuỗi rỗng)
+
+get a character by index
+.charAt(index)
+hoặc tên biến [index]
+
+20.làm việc với số
+Number.isFinite().Xác định xem giá trị đã cho có phải là số hữu hạn hay
+không. Trả về boolean
+Number.isInteger(). Xác định xem giá trị đã cho có phải là số nguyên hay
+không. Trả về boolean
+Number.parseFloat(). Chuyển đổi chuỗi đã cho thành một số dấu phẩy động
+Number.parseInt(). Chuyển đổi chuỗi đã cho thành một số nguyên
+Number.prototype.toFixed(). Chuyển đổi và trả về chuỗi đại diện cho số đã
+cho, có số chữ số chính xác sau dấu thập phân, trả về kiểu String
+Number.prototype.toString(). Chuyển đổi và trả về số đã cho dưới dạng chuỗi
+
+
+21. có 2 cách tạo số
+tạo bình thường a=1
+new number()
+
+kiểm  tra 1 số có phải NaN hay không thì dùng hàm isNaN không dùng so sánh ===
+
+22. type of NaN = number
+23. 
+
+
+*/
+>>>>>>> Stashed changes
